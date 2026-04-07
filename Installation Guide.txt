@@ -1,6 +1,6 @@
 Project Setup Guide (Windows + VS Code)
 
-This guide explains how to install everything needed to run this project from scratch on Windows.
+This guide explains how to install everything needed to run this project from scratch on Windows. (ChatGPT made this because I'm really lazy also I don't really know how to do this and I asked ChatGPT for these instructions for myself also so if it doesn't work its not my fault sorry!)
 
 ------------------------------------------------------------
 1. Install Python
