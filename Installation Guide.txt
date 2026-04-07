@@ -1,0 +1,105 @@
+Project Setup Guide (Windows + VS Code)
+
+This guide explains how to install everything needed to run this project from scratch on Windows.
+
+------------------------------------------------------------
+1. Install Python
+------------------------------------------------------------
+
+1. Go to: https://www.python.org/downloads/
+2. Download Python 3.x
+3. IMPORTANT: Check "Add Python to PATH" during installation
+4. Finish installation
+
+Verify:
+    python --version
+
+------------------------------------------------------------
+2. Install VS Code
+------------------------------------------------------------
+
+1. Go to: https://code.visualstudio.com/
+2. Install with default settings
+
+------------------------------------------------------------
+3. Install Python Extension in VS Code
+------------------------------------------------------------
+
+1. Open VS Code
+2. Extensions tab (left sidebar)
+3. Search "Python"
+4. Install Microsoft extension
+
+------------------------------------------------------------
+4. Download the Project
+------------------------------------------------------------
+
+If using Git:
+    git clone <repo-url>
+    cd <repo-folder>
+
+Or download ZIP and extract.
+
+------------------------------------------------------------
+5. Open Project in VS Code
+------------------------------------------------------------
+
+File -> Open Folder -> select project folder
+
+------------------------------------------------------------
+6. Create Virtual Environment
+------------------------------------------------------------
+
+In VS Code terminal (Ctrl + ~):
+
+    python -m venv venv
+
+------------------------------------------------------------
+7. Activate Virtual Environment
+------------------------------------------------------------
+
+Windows:
+
+    venv\Scripts\activate
+
+You should see:
+    (venv)
+
+------------------------------------------------------------
+8. Install Requirements
+------------------------------------------------------------
+
+    pip install -r requirements.txt
+
+------------------------------------------------------------
+9. Run the Program
+------------------------------------------------------------
+
+Example:
+
+    python main.py
+
+------------------------------------------------------------
+Troubleshooting
+------------------------------------------------------------
+
+"python not recognized":
+- Reinstall Python and check "Add to PATH"
+- Or try: py --version
+
+pip not working:
+    python -m pip install -r requirements.txt
+
+VS Code doesn't detect Python:
+- Ctrl + Shift + P
+- "Python: Select Interpreter"
+- Choose venv interpreter
+
+------------------------------------------------------------
+Quick Start
+------------------------------------------------------------
+
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python main.py
