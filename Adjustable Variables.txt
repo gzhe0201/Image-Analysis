@@ -1,0 +1,19 @@
+This is a list of adjustable variables in the code that will change the outcome of the results. Ctrl+F and search "Adjustable" to find them.
+
+For these variables, only change the number in the line. Do not change any formulas or names. 
+
+(27)(28)(29): These are the channel numbers for the different colors. You can find this by opening ImageJ. Remember, indexing starts at 0 in Python (so if it is the first channel in ImageJ, the channel number is 0)
+(41) thresh_green: Green threshold number. Lower number will be more generous in marking green areas, higher number will mark less.
+(43) min_size: minimum size (area in pixels^2) for a green region to be considered as "positive"
+(71) percent_on_edge: the minimum percent of the perimeter of a dapi region that is on the edge of the image for it to be excluded 
+(85) is_small = prop.area < : The pixel area for a nucleus to be considered "small" (not micro, just small)
+(87) percent_shared: the minimum percent of the shared perimeter of two adjacent nuclei for them to be considered overlapping, when small
+(89) percent_shared: same as above, but for normal (not small) nuclei
+(112) percent_green: (percent as decimal) minimum percentage of a cell that needs to be overlapping with green to be excluded from foci analysis
+(126) 2 * np.std(foci_vals_enhanced): threshold for foci set as the number of standard deviations above the mean intensity of red within a nucleus (pre-filtered)
+(127) max(t_foci, 60): minimum threshold to be considered a focus point
+(129) same as (127)
+(136) min_size = 3: mininimum number of pixels to be considered a focus point after binary_closing adjustment
+(243) h = 0.05*max_dist: honestly this is really hard to explain. Just set it between 0.01-0.05. Only change if literally nothing else works.
+(246) footprint = np.ones((50, 50)): Arguably most important variable. This is set as somewhere between 1x to 1.5x of the average radius of nuclei in your images. To find average radius, go in ImageJ and use the segment tool. Make sure to convert the units between microns and pixels. The units in Python are all pixels. The conversion rate can be found in ImageJ (Image -> Show Info...). 
+(293-294): # is a comment function, it makes it so that line is not read by the code. Here, plt.savefig saves all the image results, while plt.show will literally show the image result while the code runs. Only activate one of these at a time. Typically, I use plt.show while testing out different parameters.
